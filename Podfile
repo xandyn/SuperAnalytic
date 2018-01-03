@@ -6,8 +6,10 @@ target 'SuperAnalytic' do
   use_frameworks!
 
   # Pods for SuperAnalytic
+  # custom
 
   pod 'MobileCenter'
+  pod 'MobileCenter/Push'
 
   target 'SuperAnalyticTests' do
     inherit! :search_paths

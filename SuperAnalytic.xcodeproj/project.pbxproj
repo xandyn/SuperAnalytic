@@ -44,6 +44,7 @@
 		3FEAD9038F098EDC83C75A14 /* Pods-SuperAnalytic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAnalytic.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperAnalytic/Pods-SuperAnalytic.release.xcconfig"; sourceTree = "<group>"; };
 		5548945D4AAA6A6027658D73 /* Pods-SuperAnalyticTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAnalyticTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SuperAnalyticTests/Pods-SuperAnalyticTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BE3DE9821172B723BA52026 /* Pods-SuperAnalyticUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAnalyticUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SuperAnalyticUITests/Pods-SuperAnalyticUITests.release.xcconfig"; sourceTree = "<group>"; };
+		723490E71F74F99900B872B3 /* SuperAnalytic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperAnalytic.entitlements; sourceTree = "<group>"; };
 		7265390A1F710F0F00726F49 /* SuperAnalytic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAnalytic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7265390D1F710F0F00726F49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7265390F1F710F0F00726F49 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		7265390C1F710F0F00726F49 /* SuperAnalytic */ = {
 			isa = PBXGroup;
 			children = (
+				723490E71F74F99900B872B3 /* SuperAnalytic.entitlements */,
 				7265390D1F710F0F00726F49 /* AppDelegate.swift */,
 				7265390F1F710F0F00726F49 /* FirstViewController.swift */,
 				726539111F710F0F00726F49 /* SecondViewController.swift */,
@@ -245,8 +247,13 @@
 				TargetAttributes = {
 					726539091F710F0F00726F49 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8RAETFZVRN;
+						DevelopmentTeam = 285W24646W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					7265391F1F710F0F00726F49 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -618,11 +625,15 @@
 			baseConfigurationReference = 0E737E2C1FFE06D70FC57F64 /* Pods-SuperAnalytic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RAETFZVRN;
+				CODE_SIGN_ENTITLEMENTS = SuperAnalytic/SuperAnalytic.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = SuperAnalytic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vagapov.SuperAnalytic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.SuperAnalytic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -632,11 +643,15 @@
 			baseConfigurationReference = 3FEAD9038F098EDC83C75A14 /* Pods-SuperAnalytic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RAETFZVRN;
+				CODE_SIGN_ENTITLEMENTS = SuperAnalytic/SuperAnalytic.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 285W24646W;
 				INFOPLIST_FILE = SuperAnalytic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vagapov.SuperAnalytic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akvelon.SuperAnalytic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -722,6 +737,7 @@
 				726539361F710F0F00726F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		726539371F710F0F00726F49 /* Build configuration list for PBXNativeTarget "SuperAnalyticTests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +746,7 @@
 				726539391F710F0F00726F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7265393A1F710F0F00726F49 /* Build configuration list for PBXNativeTarget "SuperAnalyticUITests" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +755,7 @@
 				7265393C1F710F0F00726F49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

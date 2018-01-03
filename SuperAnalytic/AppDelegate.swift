@@ -9,6 +9,7 @@
 import UIKit
 
 import MobileCenter
+import MobileCenterPush
 import MobileCenterAnalytics
 import MobileCenterCrashes
 
@@ -20,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        MSMobileCenter.start("ad1df0c6-4bd1-4df1-bdc2-8642b6e7f864", withServices:[
+        MSMobileCenter.start("ec19062f-0ade-4a93-88db-75a81a04ab65", withServices:[
             MSAnalytics.self,
-            MSCrashes.self
+            MSCrashes.self,
+            MSPush.self
         ])
         return true
     }
